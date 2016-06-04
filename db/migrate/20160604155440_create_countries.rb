@@ -1,6 +1,6 @@
 class CreateCountries < ActiveRecord::Migration
   def change
-    creat_table :countries do |t|
+    create_table :countries do |t|
       t.string :country_name
       t.integer :image_id
 

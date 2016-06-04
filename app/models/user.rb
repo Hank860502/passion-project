@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   include BCrypt
-  has_many :tours, through: :wish_list
+  has_many :tours, through: :wishlists
 
   validates :first_name, length: { in: 2..50 }
   validates :last_name, length: { in: 2..50}

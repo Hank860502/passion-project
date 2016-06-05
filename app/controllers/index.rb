@@ -1,11 +1,12 @@
 get '/' do
 	if session[:user_id]
-		redirect '/users/tweets'
+		redirect '/countries'
 	else
 		redirect '/register'
 	end
 end
 
-get '/users/tweets' do
-  erb :'/users/tweets'
+get '/countries' do
+	@countries = Country.all
+  erb :'/country/countries'
   end

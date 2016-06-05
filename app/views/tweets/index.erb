@@ -1,5 +1,0 @@
-<h1>Tweets history for <%= @user.user_name%>.</h1>
-<% @tweets.each do |tweet| %>
-<li><%= tweet.body %></li>
-<% end %>
-<a href="/users/<%= @user.id %>/tweets/new">Create tweet</a>

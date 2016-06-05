@@ -7,7 +7,8 @@ class CreateTours < ActiveRecord::Migration
       t.integer :time_needed
       t.integer :comment_id
       t.integer :country_id
-      t.integer :image_id
+      t.integer :image_id # not assign yet, thinking maybe can generate random picture from tours images
+
       t.timestamps null: false
     end
   end

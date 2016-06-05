@@ -25,16 +25,17 @@
 <body>
 
   <nav>
-    <div class="nav-wrapper blue">
+    <div class="nav-wrapper black">
         <ul id="nav-mobile" class="right">
           <% if current_user %>
-          <a href="/users">Lil' Bro</a>
-            <li><a href="/users/<%= current_user.id %>/tweets">Brofile</a></li>
-            <li><a href="/users/<%= current_user.id %>/tweets/new">Squak Bruh</a></li>
+          <a href="/">Traveller</a>
+            <li><a href="/users/<%= current_user.id %>/wishlists">Wish list</a></li>
+  <!--           <li><a href="/users/<%= current_user.id %>/tweets/new">Squak Bruh</a></li> -->
             <li><a href="/logout">Logout Bruh</a></li>
           <% else %>
-            <li><a href="/login">Login Bruh</a></li>
-            <li><a href="/register">Register Bruh</a></li>
+            <a href="/">Traveller</a>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/register">Register</a></li>
           <% end %>
     </div>
   </nav>

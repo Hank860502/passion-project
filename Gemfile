@@ -14,7 +14,8 @@ gem 'rake'
 gem 'bcrypt'
 
 gem 'shotgun'
-
+# gem "paperclip", "~> 5.0.0.beta1"  #image
+# gem 'aws-sdk', '>= 2.0.34'
 group :test do
   gem 'shoulda-matchers'
   gem 'rack-test'

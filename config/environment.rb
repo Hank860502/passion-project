@@ -4,7 +4,6 @@
 ENV['BUNDLE_GEMFILE'] ||= File.expand_path('../../Gemfile', __FILE__)
 
 require 'bundler/setup' if File.exists?(ENV['BUNDLE_GEMFILE'])
-
 # Require gems we care about
 require 'rubygems'
 
@@ -21,8 +20,10 @@ require "sinatra/reloader" if development?
 require 'erb'
 require 'bcrypt'
 require 'faker'
+# require 'paperclip'
 
 # Some helper constants for path-centric logic
+# Paperclip.options[:command_path] = "/usr/local/bin/"  # image
 APP_ROOT = Pathname.new(File.expand_path('../../', __FILE__))
 
 APP_NAME = APP_ROOT.basename.to_s

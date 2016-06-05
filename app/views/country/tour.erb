@@ -1,1 +1,4 @@
-<h1>hi</h1>
+<h1><%= @country.country_name %></h1>
+<% @country.tours.each do |tour| %>
+	<%= tour.tour_name %><br>
+<% end %>

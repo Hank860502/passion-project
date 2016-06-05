@@ -6,7 +6,7 @@ class CreateTours < ActiveRecord::Migration
       t.string :content
       t.integer :time_needed
       t.integer :country_id
-      t.integer :image_id # not assign yet, thinking maybe can generate random picture from tours images
+ 
       # t.attachment :avatar undefined method attachment...
 
       t.timestamps null: false

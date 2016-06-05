@@ -4,6 +4,7 @@ class Tour < ActiveRecord::Base
   has_many :wishlists
   has_many :images
   has_many :votes
+  has_many :comments
   belongs_to :country
 
 end

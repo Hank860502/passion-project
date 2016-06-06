@@ -14,6 +14,10 @@ get '/countries' do
 get '/countries/:id' do
 	@country = Country.find(params[:id])
 	@tours = @country.tours
-	
+
+	erb :'/country/tours'
+end
+
+get '/tour/:id' do
 	erb :'/country/tour'
 end

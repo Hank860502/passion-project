@@ -1,0 +1,7 @@
+<h1><%= @country.country_name %></h1>
+<% @country.tours.each do |tour| %>
+	<h3><%= tour.tour_name %><br></h3>
+	<% tour.images.each do |image| %><br>
+		<a href="/tour/:id"><img src="<%= image.url %>" height="500" width="800"><br></a>
+<% end %>
+<% end %>

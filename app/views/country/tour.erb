@@ -1,1 +1,8 @@
-<h3>hi</h3>
+<h3><%= @tour.tour_name %></h3><br>
+<% @tour.images.each do |image| %>
+	<img src="<%= image.url %>" height="600" width="1000"><br>
+<% end %>
+<%= @tour.content %><br>
+<p>The time you might want to spend in this place is around <%= @tour.time_needed %> hours.</p>
+<p>$<%= @tour.price %></p>
+<a href="/users/<%=session[:user_id]%>/wishlist/<%= @tour.id %>">Add this item to wish list</a>

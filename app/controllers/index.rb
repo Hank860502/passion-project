@@ -19,5 +19,11 @@ get '/countries/:id' do
 end
 
 get '/tour/:id' do
+	@tour = Tour.find(params[:id])
 	erb :'/country/tour'
+end
+
+get '/users/:id/wishlist/:tour_id' do
+	@wishlists = Wishlist.create(user_id: params[:id], tour_id: params[:tour_id] )
+	erb :'users/wishlists'
 end

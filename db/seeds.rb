@@ -9,10 +9,10 @@ User.create(first_name: "hank", last_name: "chen", user_name: "hank123", passwor
 
 Country.create(country_name: "Taiwan", url: "http://cdn.ttgtmedia.com/rms/editorial/Taiwan_Fotolia.jpg")
 
-Tour.create(tour_name: "Hank's home town", price: 0, content: "Hank will bring you to the best night market in the world", time_needed: 5, country_id: 1)
-Tour.create(tour_name: "Ali mountain", price: 60, content: "One of the best sunrise in Taiwan.", time_needed: 5, country_id: 1)
-Tour.create(tour_name: "Taipei 101", price: 0, content: "One of the tallest building in the world.", time_needed: 2, country_id: 1)
-Tour.create(tour_name: "YuShan", price: 100, content: "The tallest mountain in south east Asia.", time_needed: 12, country_id: 1)
+Tour.create(tour_name: "Taichung Tour", price: 10, content: "Visit the national theater and night market in downtown Taichung with Hank. ", time_needed: 5, country_id: 1)
+Tour.create(tour_name: "Ali mountain", price: 50, content: "One of the best sunrise in Taiwan.", time_needed: 5, country_id: 1)
+Tour.create(tour_name: "Taipei 101", price: 50, content: "One of the tallest building in the world.", time_needed: 2, country_id: 1)
+Tour.create(tour_name: "Yu Shan", price: 100, content: "The tallest mountain in south east Asia.", time_needed: 12, country_id: 1)
 Image.create(url: "https://img.hotelscan.com/667_375/1/3586-000-taichung.jpg", tour_id: 1) #Taichung
 Image.create(url: "http://news.gpwb.gov.tw/p/b_F0101/20141205/2356024.jpg", tour_id: 2) #Ali mountain
 Image.create(url: "http://mobileonlyx.com/wp-content/uploads/2015/10/BG-2.jpg", tour_id: 3) #taipei101

@@ -5,4 +5,5 @@
 <%= @tour.content %><br>
 <p>The time you might want to spend in this place is around <%= @tour.time_needed %> hours.</p>
 <p>$<%= @tour.price %></p>
-<a href="/users/<%=session[:user_id]%>/wishlist/<%= @tour.id %>">Add this item to wish list</a>
+<a id="<%= @tour.id %>" href="/users/<%=session[:user_id]%>/wishlist/<%= @tour.id %>" class="add_to_wishlist" data="<%= @tour.tour_name %>">Add this item to wish list</a>
+

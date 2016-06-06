@@ -1,4 +1,4 @@
-<h1><%= @country.country_name %></h1>
+<h1 class="products"><%= @country.country_name %></h1>
 <% @country.tours.each do |tour| %>
 	<h3><%= tour.tour_name %><br></h3>
 	<% tour.images.each do |image| %>

@@ -23,6 +23,12 @@ get '/tour/:id' do
 	erb :'/country/tour'
 end
 
+get '/users/:id/wishlists' do
+	user = User.find(params[:id])
+	@wishlists = user.wishlists
+	erb :'users/wishlists'
+end
+
 get '/users/:id/wishlist/:tour_id' do
 	@wishlists = Wishlist.create(user_id: params[:id], tour_id: params[:tour_id])
 	@user = User.find(session[:user_id])

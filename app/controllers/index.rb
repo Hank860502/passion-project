@@ -24,6 +24,8 @@ get '/tour/:id' do
 end
 
 get '/users/:id/wishlist/:tour_id' do
-	@wishlists = Wishlist.create(user_id: params[:id], tour_id: params[:tour_id] )
+	@wishlists = Wishlist.create(user_id: params[:id], tour_id: params[:tour_id])
+	@user = User.find(session[:user_id])
+	@total = 0
 	erb :'users/wishlists'
 end

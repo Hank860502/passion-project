@@ -11,8 +11,9 @@ $(".add_to_wishlist").on("click", function(e) {
  debugger;
  item_id = $(this).attr("id")
  item_name = $(this).attr("data")
+ console.log(item_name)
   var product = moltin.Product.Find({slug: item_name});
-  var item = moltin.Cart.Insert(product.id, item_id, 1);
+  var item = moltin.Cart.Insert(product.id, 1, null);
   var cart = moltin.Cart.Contents();
   console.log(cart)
 })

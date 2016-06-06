@@ -1,0 +1,6 @@
+<h1>Explore the world with us</h1>
+<!-- <img src=https://source.unsplash.com/user/hank860502/likes/1600x800> -->
+<ul><% @countries.each do |country| %>
+	<h3><li> <a href="/countries/<%= country.id %>"><%= country.country_name %></a><br></li></h3>
+	<img src="<%= country.url %>" height="300" width="600">
+<% end %></ul>

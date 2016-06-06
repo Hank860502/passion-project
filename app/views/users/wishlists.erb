@@ -1,0 +1,6 @@
+<h3><% @user.tours.each do |tour|%></h3>
+	<%= tour.tour_name %>
+	<% @total += tour.price%>
+<% end %>
+
+<p>total amount of your wishlist is <%= @total %></p>

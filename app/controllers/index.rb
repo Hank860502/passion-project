@@ -14,10 +14,6 @@ get '/countries' do
 get '/countries/:id' do
 	@country = Country.find(params[:id])
 	@tours = @country.tours
-	# @images_id = []
-	# @tours.each do |tour|
-	# 	 @images_id << tour.image_id
-	# end
-	# images = Image.find
+	
 	erb :'/country/tour'
 end

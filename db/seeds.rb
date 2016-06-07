@@ -30,6 +30,6 @@ Country.create(country_name: "United Kingdom", url: "http://smithstonewalters.co
 Tour.create(tour_name: "Eilean Donan Castle, Kyle of Lochalsh", price: 100, content: "Walk along the castle with uniform provided.", time_needed: 3, country_id:2)
 Tour.create(tour_name: "London Bridge", price: 50, content: "Walk across the bridge", time_needed: 3, country_id: 2)
 Tour.create(tour_name: "Stonehenge", price: 100, content: "Visit the mysterious Stonehenge", time_needed: 3, country_id: 2)
-Image.create(url: "https://unsplash.com/photos/lhah6lFnims/700x500", tour_id: 5) #UK castle
+Image.create(url: "http://livrancourt.com/wp/wp-content/uploads/2013/01/Eilean-Donan-Castle-1220-Loch-Duichear-Kyle-of-Lochalsh-Scotland.jpg", tour_id: 5) #UK castle
 Image.create(url: "https://images.unsplash.com/photo-1454537468202-b7ff71d51c2e?crop=entropy&fit=crop&fm=jpg&h=800&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=975", tour_id: 6) #london bridge
 Image.create(url: "http://corporate.studygroup.com/-/media/Corporate%20Site/Images/Carousel/Standard/Higher%20Education/UK/Higher_education_uk.jpg", tour_id: 7)

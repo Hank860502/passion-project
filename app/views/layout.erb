@@ -37,13 +37,12 @@
   <nav>
     <div class="nav-wrapper black">
         <ul id="nav-mobile" class="right">
+        <a href="/" class="brand-logo center">Traveller</a>
           <% if current_user %>
-          <a href="/">Traveller</a>
             <li><a href="/users/<%= current_user.id %>/wishlists">Wish list</a></li>
-  <!--           <li><a href="/users/<%= current_user.id %>/tweets/new">Squak Bruh</a></li> -->
             <li><a href="/logout">Logout</a></li>
           <% else %>
-            <a href="/">Traveller</a>
+          <a href="/" class="brand-logo center">Traveller</a>
             <li><a href="/login">Login</a></li>
             <li><a href="/register">Register</a></li>
           <% end %>

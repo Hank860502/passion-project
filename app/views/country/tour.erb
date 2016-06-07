@@ -1,6 +1,6 @@
 <h3><%= @tour.tour_name %></h3><br>
 <% @tour.images.each do |image| %>
-	<img src="<%= image.url %>" height="600" width="1000"><br>
+	<img src="<%= image.url %>" height="600" width="850"><br>
 <% end %>
 <%= @tour.content %><br>
 <p>The time you might want to spend in this place is around <%= @tour.time_needed %> hours.</p>

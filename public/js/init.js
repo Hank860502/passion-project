@@ -18,26 +18,17 @@ $(".add_to_wishlist").on("click", function(e) {
   // promise.then(function(fulfill) {
 
   // })
-  // var cart = moltin.Cart.Contents();
   var item = moltin.Cart.Insert(product[0].id, 1, null);
     console.log(item)
-  // console.log(cart)
+  var cart = moltin.Cart.Contents();
+  console.log(cart)
+  $("wishlist").append(cart)
 })
 });
 
   //   $(".products").html(product[0].description)
   //   console.log(product)
   });
-
-
-
-$('.container').html("hello")
-
-
-
-
-
-
 
 
 

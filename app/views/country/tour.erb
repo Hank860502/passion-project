@@ -1,9 +1,40 @@
-<h3><%= @tour.tour_name %></h3><br>
 <% @tour.images.each do |image| %>
-	<img src="<%= image.url %>" height="600" width="850"><br>
+	<img src="<%= image.url %>" height="400" width="1440"><br>
+<h3><%= @tour.tour_name %></h3><br>
 <% end %>
-<%= @tour.content %><br>
-<p>The time you might want to spend in this place is around <%= @tour.time_needed %> hours.</p>
-<p>$<%= @tour.price %></p>
-<a id="<%= @tour.id %>" href="/users/<%=session[:user_id]%>/wishlist/<%= @tour.id %>" class="add_to_wishlist" data="<%= @tour.tour_name %>">Add this item to wish list</a>
+<p>Description: <%= @tour.content %><br></p>
+<p>Lasting Time: <%= @tour.time_needed %> hours.</p>
+<p>Price: $<%= @tour.price %></p>
+<a id="<%= @tour.id %>" href="/users/<%=session[:user_id]%>/wishlist/<%= @tour.id %>" class="add_to_wishlist" data="<%= @tour.tour_name %>">Add to wish list</a>
+
+<div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s3">
+          <input id="first_name" type="text" class="validate">
+          <label for="first_name">Quantity</label>
+        </div>
+        <div class="input-field col s3">
+          <input id="last_name" type="text" class="validate">
+          <label for="last_name">Date</label>
+        </div>
+      </div>
+      <div class="row">
+    <!--     <div class="input-field col s12">
+          <input disabled id="disabled" type="text" class="validate">
+          <label for="disabled">Disabled</label>
+        </div> -->
+      </div>
+      <div class="row">
+        <div class="input-field col s6">
+          <input id="email" type="email" class="validate">
+          <label for="email">Remarks(optional)</label>
+        </div>
+      </div>
+
+  <button class="p btn btn-success dropdown-toggle btn-block" type="button">Purchase now</button>
+    </form>
+  </div>
+
+
 

@@ -1,5 +1,5 @@
 <h3 class="wishlist">My Wishlist</h1>
-<% @user.tours.each do |tour| %>
+<% @tours.each do |tour| %>
   <%= tour.tour_name %><br>
   <% tour.images.each do |image| %><br>
     <a href="/tour/<%= tour.id %>"><img src="<%= image.url %>" height="300" width="450"></a>

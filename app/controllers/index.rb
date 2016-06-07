@@ -31,6 +31,7 @@ end
 get '/users/:id/wishlists' do
 	@user = User.find(params[:id])
 	@wishlists = @user.wishlists
+	@tours = @user.tours.uniq
 	erb :'users/wishlists'
 end
 

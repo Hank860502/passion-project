@@ -35,3 +35,7 @@ get '/users/:id/wishlist/:tour_id' do
 	@total = 0
 	erb :'users/wishlists'
 end
+
+get '/api' do
+
+end

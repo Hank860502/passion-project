@@ -8,14 +8,20 @@ $('input#input_text, textarea#textarea1').characterCounter();
 
 $(".add_to_wishlist").on("click", function(e) {
   e.preventDefault()
- debugger;
  item_id = $(this).attr("id")
  item_name = $(this).attr("data")
  console.log(item_name)
+// var promise = new Promise(function(fulfill, reject) {
   var product = moltin.Product.Find({slug: item_name});
-  var item = moltin.Cart.Insert(product.id, 1, null);
-  var cart = moltin.Cart.Contents();
-  console.log(cart)
+  console.log(product[0].id)
+// }
+  // promise.then(function(fulfill) {
+
+  // })
+  // var cart = moltin.Cart.Contents();
+  var item = moltin.Cart.Insert(product[0].id, 1, null);
+    console.log(item)
+  // console.log(cart)
 })
 });
 

@@ -10,13 +10,10 @@
   <!--
     application.css is where you put your styles
   -->
-  <link rel="stylesheet" href="/css/application.css">
-
+  <script src="//cdn.jsdelivr.net/rsvp/3.0.6/rsvp.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script src="/js/application.js"></script>
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
-  <script src="https://js.moltin.com/v1"></script>
 
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
@@ -24,16 +21,8 @@
   <title></title>
 </head>
 <body>
-<script src="https://js.moltin.com/v1"></script>
 
-<script type="text/javascript">
-  var moltin = new Moltin({publicId: 'NGtMpNEgNZhfU9MHjFAfDja1CkkhoiRvkg6JUkCS3A'});
-  moltin.Authenticate(function() {
-    var product = moltin.Product.Find({slug: 'Taichung Tour'});
-    console.log(product)
-    debugger;
-  });
-</script>
+
   <nav>
     <div class="nav-wrapper black">
         <ul id="nav-mobile" class="right">
@@ -51,5 +40,7 @@
   </nav>
 
   <%= yield %>
+  <script src="https://js.moltin.com/v1"></script>
+  <script src="/js/init.js"></script>
 </body>
 </html>

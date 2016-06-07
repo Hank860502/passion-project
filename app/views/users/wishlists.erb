@@ -1,11 +1,12 @@
 <h3 class="wishlist">My Wishlist</h1>
 <% @tours.each do |tour| %>
-  <%= tour.tour_name %><br>
-  <% tour.images.each do |image| %><br>
+  <% tour.images.each do |image| %>
     <a href="/tour/<%= tour.id %>"><img src="<%= image.url %>" height="300" width="450"></a>
+  <%= tour.tour_name %>
+    <% @total += tour.price %>
     <% end %>
 <% end %>
-
+<h4>Come on <%= current_user.first_name.capitalize %>, you still need $<%= @total%> Dollars to finish traveling your wish list.</h4><button class="p btn btn-success dropdown-toggle btn-block" type="button">Purchase all</button>
 
 
 <!-- <h3><%# @user.tours.each do |tour|%></h3>

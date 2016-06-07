@@ -1,6 +1,6 @@
-<h1><%= @country.country_name %></h1>
+<h1 class="products"><%= @country.country_name %></h1>
 <% @country.tours.each do |tour| %>
-	<h3><%= tour.tour_name %><br></h3>
+	<h3><%= tour.tour_name %></h3>
 	<% tour.images.each do |image| %>
 		<a href="/tour/<%= tour.id %>"><img src="<%= image.url %>" height="300" width="450"></a>
 <% end %>

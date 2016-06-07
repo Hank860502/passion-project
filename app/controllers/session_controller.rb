@@ -10,7 +10,7 @@ post '/register' do
 	@user.save
 	session[:user_id] = @user.id
 
-	redirect "/users/#{session[:user_id]}/tweets"
+	redirect "/countries"
 end
 
 get '/login' do
@@ -25,7 +25,7 @@ post '/login' do
 p user
 	if user && user.authenticate(password)
 		session[:user_id] = user.id
-		redirect "/users/#{session[:user_id]}/tweets"
+		redirect "/countries"
 	else
 		redirect '/login'
 	end

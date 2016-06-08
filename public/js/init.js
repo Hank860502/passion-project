@@ -26,6 +26,12 @@ $(".add_to_wishlist").on("click", function(e) {
 })
 });
 
+$("#map").on("click", function(e) {
+  e.preventDefault()
+  console.log("box")
+  $(".tour").append("<div id='googleMap' style='width:500px;height:380px;'></div>")
+})
+
   //   $(".products").html(product[0].description)
   //   console.log(product)
   });

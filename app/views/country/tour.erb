@@ -1,3 +1,4 @@
+<div class="tour">
 <% @tour.images.each do |image| %>
 	<img src="<%= image.url %>" height="400" width="1440"><br>
 <h3><%= @tour.tour_name %></h3><br>
@@ -8,7 +9,7 @@
 <a id="<%= @tour.id %>" href="/users/<%=session[:user_id]%>/wishlist/<%= @tour.id %>" class="add_to_wishlist" data="<%= @tour.tour_name %>">Add to wish list</a>
 
 <div class="row">
-    <form class="col s12">
+    <form class="col s12" actoin="/form">
       <div class="row">
         <div class="input-field col s3">
           <input id="first_name" type="text" class="validate">
@@ -32,9 +33,19 @@
         </div>
       </div>
 
-  <button class="p btn btn-success dropdown-toggle btn-block" type="button">Purchase now</button>
+  <button class="p btn btn-success dropdown-toggle btn-block" type="submit">Purchase now</button>
     </form>
+    <button id="map" class="p btn btn-success dropdown-toggle btn-block" type="submit">Extend map</button>
   </div>
+</div>
+
+
+<div id='googleMap' style='width:500px;height:380px;'></div>
+  
+
+
+
+
 
 
 

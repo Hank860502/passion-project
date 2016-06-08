@@ -43,3 +43,7 @@ get '/users/:id/wishlist/:tour_id' do
 	@total = 0
 	erb :'users/wishlists'
 end
+
+get '/form' do
+	"hi"
+end

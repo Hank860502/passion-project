@@ -431,8 +431,9 @@ th {
 }
 
 footer {
+  height: 80px;
   text-align: center;
-  background-color: lightgray;
+  background-color: gray;
 }
 
 .country_name {
@@ -443,6 +444,9 @@ footer {
 
 .fa-lg {
   margin: auto;
+  position: relative;
+  top: 18px;
+  /*right: 100px;*/
 }
 
 .world-map{
@@ -450,6 +454,32 @@ footer {
   width: 1440px;
 }
 
+#button{
+  position: absolute;
+  top: 500px;
+  left: 550px;  
+  z-index: 1;
+}
 
+#header{
+  background-color: black;
+  opacity: 0.5;
+  position: absolute;
+  top: 478px;
+  height: 90px;
+  width: 100%;
+  opacity: 40%;
+}
 
+#taiwan{
+  position: absolute;
+  top: 680px;
+  left: 1280px;
+}
+
+#uk{
+  position: absolute;
+  top: 650px;
+  left: 700px;
+}
 

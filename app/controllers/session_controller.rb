@@ -5,12 +5,14 @@ get '/register' do
 end
 
 post '/register' do
-	@user = User.new(first_name: params[:first_name],last_name: params[:last_name],user_name: params[:user_name],image: params[:image])
-	@user.password = params[:password]
-	@user.save
-	session[:user_id] = @user.id
-
-	redirect "/countries"
+	@user = User.new(params[:user])
+	
+	if @user.save
+		session[:user_id] = @user.id
+		redirect '/'
+	else
+		erb :"/sessions/register"
+	end
 end
 
 get '/login' do
@@ -27,13 +29,14 @@ p user
 		session[:user_id] = user.id
 		redirect "/countries"
 	else
-		redirect '/login'
+		@error = "Password or username is incorrect."
+		erb :'/sessions/login'
 	end
 end
 
 get '/logout' do
-
-session.clear
+	current_user = nil
+	session[:user_id] = nil
 redirect '/login'
 
 end

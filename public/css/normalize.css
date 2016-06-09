@@ -421,3 +421,35 @@ td,
 th {
   padding: 0;
 }
+
+.image {
+  display: inline-block;
+  height:300px; 
+  width:690px;
+  margin-left: 13px;
+  margin-right: 13px;
+}
+
+footer {
+  text-align: center;
+  background-color: lightgray;
+}
+
+.country_name {
+  margin-left: 310px;
+  font-size: 35px;
+  color: lightblue;
+}
+
+.fa-lg {
+  margin: auto;
+}
+
+.world-map{
+  height: 300px;
+  width: 1440px;
+}
+
+
+
+

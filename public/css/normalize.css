@@ -17,6 +17,8 @@ html {
  */
 
 body {
+/*  height: 100%;
+  width: 100%;*/
   margin: 0;
 }
 
@@ -421,3 +423,108 @@ td,
 th {
   padding: 0;
 }
+
+.image {
+  display: inline-block;
+  height:300px; 
+  width:690px;
+  margin-left: 13px;
+  margin-right: 13px;
+}
+
+footer {
+  height: 80px;
+  text-align: center;
+  background-color: gray;
+  bottom: 0;
+}
+
+.country_name {
+  margin-left: 310px;
+  font-size: 35px;
+  color: lightblue;
+}
+
+.fa-lg {
+  top: 18px;
+  /*right: 100px;*/
+}
+
+.world-map{
+  height: 300px;
+  width: 1440px;
+}
+
+#button{
+  position: absolute;
+  top: 500px;
+  left: 550px;  
+  z-index: 1;
+}
+
+#header{
+  background-color: black;
+  opacity: 0.5;
+  position: absolute;
+  top: 478px;
+  height: 90px;
+  width: 100%;
+  opacity: 40%;
+}
+
+#taiwan{
+  position: absolute;
+  top: 660px;
+  left: 1273px;
+}
+
+#uk{
+  position: absolute;
+  top: 650px;
+  left: 700px;
+}
+
+#searchform{
+  display: none;
+  position: absolute;
+  height: 1300px;
+  width: 1445px;
+  background-color: black;
+  opacity: 0.8;
+}
+
+#searchformindiv{
+  margin: 0 auto;
+  color: white;
+  width: 500px;
+  height: 800px;
+  padding-top: 200px;
+}
+
+#tourimages{
+  display: inline-block;
+}
+#tourimage{
+  width: 100%;
+  height: 500px;
+}
+
+#tourlink{
+  padding-left: 110px;
+  font-size: 40px;
+}
+
+#googleMap{
+  width:500px;
+  height:380px;
+  position: absolute;
+  top: 650px;
+  left: 850px;
+  border: solid 5px gray;
+  border-radius: 8%;
+}
+
+.tourcontent{
+  padding-left: 30px
+}
+

@@ -6,6 +6,8 @@ class CreateTours < ActiveRecord::Migration
       t.string :content
       t.integer :time_needed
       t.integer :country_id
+      t.decimal :longitude
+      t.decimal :latitude
  
       # t.attachment :avatar undefined method attachment...
 

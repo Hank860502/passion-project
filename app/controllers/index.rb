@@ -1,9 +1,5 @@
 get '/' do
-	if session[:user_id]
 		redirect '/countries'
-	else
-		redirect '/register'
-	end
 end
 
 get '/countries' do
@@ -29,17 +25,27 @@ get '/tour/:id' do
 end
 
 get '/users/:id/wishlists' do
-	@user = User.find(params[:id])
 	@wishlists = @user.wishlists
-	@tours = @user.tours.uniq
+	@tours = current_user.tours.uniq
 	@total = 0
 	erb :'users/wishlists'
 end
 
 get '/users/:id/wishlist/:tour_id' do
-
-	@wishlists = Wishlist.new(user_id: params[:id], tour_id: params[:tour_id])
-	@user = User.find(session[:user_id])
+	@wishlists = Wishlist.create(user_id: current_user, tour_id: params[:tour_id])
+	@tours = current_user.tours.uniq
 	@total = 0
 	erb :'users/wishlists'
+end
+
+get '/search' do
+	redirect '/tour/3'
+end
+
+get '/purchase/:id' do
+	@tour = Tour.find(params[:id])
+	@data = params
+	@total = @data["quantity"].to_i*@tour.price
+	p @total
+	erb :'/tour/purchase'
 end

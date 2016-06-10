@@ -1,4 +1,6 @@
-<h1>Login Tour designer</h1>
+<% if @error %>
+	<h3 style="text-align: center;"><%= @error %></h3>
+<% end %>
 
 <form method="post" action="/login">
 	<p>user name</p>

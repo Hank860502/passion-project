@@ -72,7 +72,15 @@ function smallIcon(){
 
 function addToWishlist(e){
   e.preventDefault();
-  
+  that = $(this)
+  url = $(this).attr("href")
+  $.ajax({
+    method: 'GET',
+    url: url
+  }).done(function(msg){
+    that.html("Remove from wishlist.")
+
+  })
 };
 
 

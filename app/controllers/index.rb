@@ -41,3 +41,11 @@ end
 get '/search' do
 	redirect '/tour/3'
 end
+
+get '/purchase/:id' do
+	@tour = Tour.find(params[:id])
+	@data = params
+	@total = @data["quantity"].to_i*@tour.price
+	p @total
+	erb :'/tour/purchase'
+end

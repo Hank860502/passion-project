@@ -40,9 +40,9 @@ $(document).ready(function() {
 var eventListeners = function(){
   $("#button").on("click", searchBar);
   $("#navsearch").on("click", searchBar);
-  $("#exit").on("click", hidesearchBar)
-  $(".fa-3x").hover(bigIcon, smallIcon)
-
+  $("#exit").on("click", hidesearchBar);
+  $(".fa-3x").hover(bigIcon, smallIcon);
+  $(".add_to_wishlist").on("click", addToWishlist)
 }
 
 function searchBar(e){
@@ -68,6 +68,11 @@ function bigIcon(){
 function smallIcon(){
   $(this).removeClass("fa-4x")
   $(this).addClass("fa-3x")
+};
+
+function addToWishlist(e){
+  e.preventDefault();
+  
 };
 
 

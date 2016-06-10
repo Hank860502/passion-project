@@ -7,7 +7,7 @@
 <p>Description: <%= @tour.content %><br></p>
 <p>Lasting Time: <%= @tour.time_needed %> hours.</p>
 <p>Price: $<%= @tour.price %></p>
-<a id="<%= @tour.id %>" href="/users/<%=session[:user_id]%>/wishlist/<%= @tour.id %>" class="add_to_wishlist" data="<%= @tour.tour_name %>">Add to wish list</a>
+<a href="/users/<%= current_user.id %>/wishlist/<%= @tour.id %>" class="add_to_wishlist">Add to wish list</a>
 
 <div class="row">
     <form class="col s6" action="/purchase/<%= @tour.id %>" id="purchaseform">

@@ -43,6 +43,7 @@ var eventListeners = function(){
   $("#exit").on("click", hidesearchBar);
   $(".fa-3x").hover(bigIcon, smallIcon);
   $(".add_to_wishlist").on("click", addToWishlist)
+  $("#purchasebutton").on("click", popForm)
 }
 
 function searchBar(e){
@@ -79,9 +80,14 @@ function addToWishlist(e){
     url: url
   }).done(function(msg){
     that.html("Remove from wishlist.")
-
-  })
+  }) // remove not start yet
 };
+
+function popForm(e){
+  e.preventDefault();
+  $(".purchaseform").show()
+
+}
 
 
     // for (var i = products.length - 1; i >= 0; i--) {

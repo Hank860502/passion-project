@@ -17,6 +17,8 @@ html {
  */
 
 body {
+/*  height: 100%;
+  width: 100%;*/
   margin: 0;
 }
 
@@ -434,6 +436,7 @@ footer {
   height: 80px;
   text-align: center;
   background-color: gray;
+  bottom: 0;
 }
 
 .country_name {
@@ -443,8 +446,6 @@ footer {
 }
 
 .fa-lg {
-  margin: auto;
-  position: relative;
   top: 18px;
   /*right: 100px;*/
 }
@@ -499,6 +500,16 @@ footer {
   height: 800px;
   padding-top: 200px;
 }
-/*input[type="text"]{
-  font-size: 100px;
-}*/
+
+#tourimage{
+  display: inline-block;
+}
+
+#tourlink{
+  padding-left: 110px;
+  font-size: 40px;
+}
+
+
+
+

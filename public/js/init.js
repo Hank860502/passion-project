@@ -39,6 +39,7 @@ $(document).ready(function() {
 
 var eventListeners = function(){
   $("#button").on("click", searchBar);
+  $("#navsearch").on("click", searchBar);
   $("#exit").on("click", hidesearchBar)
   $(".fa-3x").hover(bigIcon, smallIcon)
 

@@ -1,7 +1,8 @@
-<h1 class="products"><%= @country.country_name %></h1>
-<% @country.tours.each do |tour| %>
-	<h3><%= tour.tour_name %></h3>
-	<% tour.images.each do |image| %>
-		<a href="/tour/<%= tour.id %>"><img src="<%= image.url %>" height="300" width="450"></a>
-<% end %>
+<p class="products"><%= @country.country_name %></p>
+
+<% @tours.each do |tour| %>
+	<a href="/tour/<%= tour.id %>" id="tourlink"><%= tour.tour_name %></a>
+<% end %><br>
+<% @tours.each do |tour| %>
+		<a href="/tour/<%= tour.id %>"><img src="<%= tour.images.first.url %>" id="tourimage" height="300" width="356"></a>
 <% end %>

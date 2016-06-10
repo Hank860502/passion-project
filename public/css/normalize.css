@@ -483,3 +483,22 @@ footer {
   left: 700px;
 }
 
+#searchform{
+  display: none;
+  position: absolute;
+  height: 1300px;
+  width: 1445px;
+  background-color: black;
+  opacity: 0.8;
+}
+
+#searchformindiv{
+  margin: 0 auto;
+  color: white;
+  width: 500px;
+  height: 800px;
+  padding-top: 200px;
+}
+/*input[type="text"]{
+  font-size: 100px;
+}*/

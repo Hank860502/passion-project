@@ -25,17 +25,15 @@ get '/tour/:id' do
 end
 
 get '/users/:id/wishlists' do
-	@user = User.find(params[:id])
 	@wishlists = @user.wishlists
-	@tours = @user.tours.uniq
+	@tours = current_user.tours.uniq
 	@total = 0
 	erb :'users/wishlists'
 end
 
 get '/users/:id/wishlist/:tour_id' do
-
-	@wishlists = Wishlist.new(user_id: params[:id], tour_id: params[:tour_id])
-	@user = User.find(session[:user_id])
+	@wishlists = Wishlist.create(user_id: current_user, tour_id: params[:tour_id])
+	@tours = current_user.tours.uniq
 	@total = 0
 	erb :'users/wishlists'
 end

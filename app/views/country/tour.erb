@@ -1,6 +1,7 @@
 <div class="tour">
 <% @tour.images.each do |image| %>
-	<img src="<%= image.url %>" height="400" width="1440"><br>
+	<img src="<%= image.url %>" id="tourimage"><br>
+  <div class="tourcontent">
 <h3><%= @tour.tour_name %></h3><br>
 <% end %>
 <p>Description: <%= @tour.content %><br></p>
@@ -9,15 +10,15 @@
 <a id="<%= @tour.id %>" href="/users/<%=session[:user_id]%>/wishlist/<%= @tour.id %>" class="add_to_wishlist" data="<%= @tour.tour_name %>">Add to wish list</a>
 
 <div class="row">
-    <form class="col s12" actoin="/form">
+    <form class="col s6" action="/form" id="purchaseform">
       <div class="row">
-        <div class="input-field col s3">
-          <input id="first_name" type="text" class="validate">
-          <label for="first_name">Quantity</label>
+        <div class="input-field col s6">
+          <input id="quantity" type="text" class="validate">
+          <label for="quantity">Quantity</label>
         </div>
-        <div class="input-field col s3">
-          <input id="last_name" type="text" class="validate">
-          <label for="last_name">Date</label>
+        <div class="input-field col s6">
+          <input id="date" type="text" class="validate">
+          <label for="date">Date</label>
         </div>
       </div>
       <div class="row">
@@ -27,9 +28,9 @@
         </div> -->
       </div>
       <div class="row">
-        <div class="input-field col s6">
-          <input id="email" type="email" class="validate">
-          <label for="email">Remarks(optional)</label>
+        <div class="input-field col s12">
+          <input id="email" type="remarks" class="validate">
+          <label for="remarks">Remarks(optional)</label>
         </div>
       </div>
 
@@ -40,7 +41,7 @@
 </div>
 
 
-<div id='googleMap' style='width:500px;height:380px;'></div>
+<div id='googleMap'></div>
   
 
 

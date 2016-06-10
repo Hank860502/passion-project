@@ -40,6 +40,6 @@ get '/users/:id/wishlist/:tour_id' do
 	erb :'users/wishlists'
 end
 
-get '/form' do
-	"hi"
+get '/search' do
+	redirect '/tour/3'
 end

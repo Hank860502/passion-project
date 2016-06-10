@@ -40,7 +40,8 @@ $(document).ready(function() {
 var eventListeners = function(){
   $("#button").on("click", searchBar);
   $("#exit").on("click", hidesearchBar)
-  $("#taiwanbutton").hover(bigTaiwan, smallTaiwan)
+  $(".fa-3x").hover(bigIcon, smallIcon)
+
 }
 
 function searchBar(e){
@@ -59,13 +60,13 @@ function hidesearchBar(e) {
   $("#uk").show();
 }
 
-function bigTaiwan(){
-  $("#taiwanbutton").removeClass("fa fa-map-marker fa-3x");
-  $("#taiwanbutton").addClass("fa fa-map-marker fa-4x");
+function bigIcon(){
+  $(this).removeClass("fa-3x");
+  $(this).addClass("fa-4x");
 }
-function smallTaiwan(){
-  $(this).removeClass("fa fa-map-marker fa-4x")
-  $(this).addClass("fa fa-map-marker fa-3x")
+function smallIcon(){
+  $(this).removeClass("fa-4x")
+  $(this).addClass("fa-3x")
 };
 
 

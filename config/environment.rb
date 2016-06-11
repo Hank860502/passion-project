@@ -20,6 +20,8 @@ require "sinatra/reloader" if development?
 require 'erb'
 require 'bcrypt'
 require 'faker'
+require 'dotenv'
+Dotenv.load
 # require 'dotenv'
 # require 'paperclip'
 

@@ -1,20 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script src="http://maps.googleapis.com/maps/api/js"></script>
-  <script>
-function initialize() {
-  var mapProp = {
-    center:new google.maps.LatLng(25.033611,121.565),
-    zoom:17,
-    mapTypeId:google.maps.MapTypeId.ROADMAP
-  };
-  var map=new google.maps.Map(document.getElementById('googleMap'),mapProp);
-}
-// DOCS how to move the handler
-google.maps.event.addDomListener(window, 'load', initialize);
-</script>
-
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&signed_in=true&callback=initMap"
+        async defer></script>
   <!--
     normalize.css removes cross-browser differences in defaults, e.g.,
     differences in how form elements appear between Firefox and IE
@@ -71,7 +59,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
   <a href="https://twitter.com/northwest_tour"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-twitter fa-stack-1x fa-inverse"></i></a>
   </span>
   <span class="fa-stack fa-lg">
-  <a href="https://www.paypal.com/tw/cgi-bin/webscr?cmd=_flow&SESSION=tn6Jg8rtNQbsUAlIB9MzIPK--q34NM3Pe10mBbYAdsjOJC0syxp3vsJquMG&dispatch=50a222a57771920b6a3d7b606239e4d529b525e0b7e69bf0224adecfb0124e9b61f737ba21b0819848475f0da5465a2ea26eae033cbe3bda"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-paypal fa-stack-1x fa-inverse"></i></a>
+  <a href=""><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-paypal fa-stack-1x fa-inverse"></i></a>
   </span>
   <span class="fa-stack fa-lg">
   <a href="/"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-google-plus fa-stack-1x fa-inverse"></i></a>

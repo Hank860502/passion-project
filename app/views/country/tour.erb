@@ -7,7 +7,7 @@
 <p>Description: <%= @tour.content %><br></p>
 <p>Lasting Time: <%= @tour.time_needed %> hours.</p>
 <p>Price: $<%= @tour.price %></p>
-<a id="<%= @tour.id %>" href="/users/<%=session[:user_id]%>/wishlist/<%= @tour.id %>" class="add_to_wishlist" data="<%= @tour.tour_name %>">Add to wish list</a>
+<a href="/users/<%= current_user.id %>/wishlist/<%= @tour.id %>" class="add_to_wishlist">Add to wish list</a>
 
 <div class="row">
     <form class="col s6" action="/purchase/<%= @tour.id %>" id="purchaseform">
@@ -34,14 +34,22 @@
         </div>
       </div>
 
-  <button class="p btn btn-success dropdown-toggle btn-block" type="submit">Purchase now</button>
+  <button class="p btn btn-success dropdown-toggle btn-block" type="submit" id="purchasebutton">Purchase now</button>
     </form>
 <!--     <button id="map" class="p btn btn-success dropdown-toggle btn-block" type="submit">Extend map</button> -->
   </div>
 </div>
 
+<div class="purchaseform" id="searchform">
+<label>Quantity</label>
+  <form id="searchformindiv" action="/purchase/<%=@tour.id%>">
+  <input type="text" name="date" value="2016/Jan/1st">
+    <input type="text" name="quantity" value="5">
+    <input type="submit" value="Confirm" class="p btn btn-success dropdown-toggle btn-block"><br>
+    <a href="/"><button id="cancelpurchase" class="p btn btn-success dropdown-toggle btn-block">Cancel</button></a>
+  </form>
 
-<div id='googleMap'></div>
+</div>
   
 
 

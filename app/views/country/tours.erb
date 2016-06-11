@@ -1,4 +1,4 @@
-<p class="products"><%= @country.country_name %></p>
+<h2 style="text-align: center;"><%= @country.country_name %></h2>
 
 <% @tours.each do |tour| %>
 	<a href="/tour/<%= tour.id %>" id="tourlink"><%= tour.tour_name %></a>

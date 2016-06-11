@@ -40,9 +40,11 @@ $(document).ready(function() {
 var eventListeners = function(){
   $("#button").on("click", searchBar);
   $("#navsearch").on("click", searchBar);
-  $("#exit").on("click", hidesearchBar)
-  $(".fa-3x").hover(bigIcon, smallIcon)
-
+  $("#exit").on("click", hidesearchBar);
+  $(".fa-3x").hover(bigIcon, smallIcon);
+  $(".add_to_wishlist").on("click", addToWishlist)
+  $("#purchasebutton").on("click", popForm)
+  $("#cancelpurchase").on("click", hideForm)
 }
 
 function searchBar(e){
@@ -70,6 +72,30 @@ function smallIcon(){
   $(this).addClass("fa-3x")
 };
 
+function addToWishlist(e){
+  e.preventDefault();
+  that = $(this)
+  url = $(this).attr("href")
+  $.ajax({
+    method: 'GET',
+    url: url
+  }).done(function(msg){
+    that.html("Remove from wishlist.")
+  }) // remove not start yet
+};
+
+function popForm(e){
+  e.preventDefault();
+  $(".purchaseform").show()
+
+}
+
+
+function hideForm(e){
+  e.preventDefault();
+  $(".purchaseform").hide()
+
+}
 
     // for (var i = products.length - 1; i >= 0; i--) {
     //   var product = products[i];

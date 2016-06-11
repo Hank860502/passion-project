@@ -25,17 +25,24 @@ get '/tour/:id' do
 end
 
 get '/users/:id/wishlists' do
-	@wishlists = @user.wishlists
+	@wishlists = current_user.wishlists
 	@tours = current_user.tours.uniq
 	@total = 0
 	erb :'users/wishlists'
 end
 
 get '/users/:id/wishlist/:tour_id' do
-	@wishlists = Wishlist.create(user_id: current_user, tour_id: params[:tour_id])
-	@tours = current_user.tours.uniq
-	@total = 0
-	erb :'users/wishlists'
+	if request.xhr?
+		@wishlists = Wishlist.create(user_id: 	current_user.id, tour_id: params[:tour_id]	)
+		@tours = current_user.tours.uniq
+		@total = 0
+		return
+	else
+		@wishlists = Wishlist.create(user_id: 	current_user.id, tour_id: params[:tour_id]	)
+		@tours = current_user.tours.uniq
+		@total = 0
+		erb :'/users/wishlists'
+	end
 end
 
 get '/search' do

@@ -40,12 +40,15 @@
   </div>
 </div>
 
-<div class="purchaseform">
-<!--   <form>
-    <input type="text" name="quantity" value="">
-  </form> -->
-  <p>asdfasdfsalkfjlsadjf</p>
-  
+<div class="purchaseform" id="searchform">
+<label>Quantity</label>
+  <form id="searchformindiv" action="/purchase/<%=@tour.id%>">
+  <input type="text" name="date" value="2016/Jan/1st">
+    <input type="text" name="quantity" value="5">
+    <input type="submit" value="Confirm" class="p btn btn-success dropdown-toggle btn-block"><br>
+    <a href="/"><button id="cancelpurchase" class="p btn btn-success dropdown-toggle btn-block">Cancel</button></a>
+  </form>
+
 </div>
 
 <div id='googleMap'></div>

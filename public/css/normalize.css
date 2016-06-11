@@ -489,6 +489,7 @@ footer {
 #searchform{
   display: none;
   position: absolute;
+  top: 0;
   height: 1300px;
   width: 1445px;
   background-color: black;
@@ -528,15 +529,5 @@ footer {
 
 .tourcontent{
   padding-left: 30px
-}
-
-.purchaseform{
-  display: none;
-  position: absolute;
-  top: 0;
-  height: 1300px;
-  width: 1445px;
-  background-color: black;
-  opacity: 0.8;
 }
 

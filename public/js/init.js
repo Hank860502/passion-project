@@ -44,6 +44,7 @@ var eventListeners = function(){
   $(".fa-3x").hover(bigIcon, smallIcon);
   $(".add_to_wishlist").on("click", addToWishlist)
   $("#purchasebutton").on("click", popForm)
+  $("#cancelpurchase").on("click", hideForm)
 }
 
 function searchBar(e){
@@ -89,6 +90,12 @@ function popForm(e){
 
 }
 
+
+function hideForm(e){
+  e.preventDefault();
+  $(".purchaseform").hide()
+
+}
 
     // for (var i = products.length - 1; i >= 0; i--) {
     //   var product = products[i];

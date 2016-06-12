@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&signed_in=true&callback=initMap"
-        async defer></script>
+<!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&signed_in=true&callback=initMap"
+        async defer></script> -->
   <!--
     normalize.css removes cross-browser differences in defaults, e.g.,
     differences in how form elements appear between Firefox and IE
@@ -40,9 +40,9 @@
     </div>
   </nav>
 <div id="searchform">
-<form action="/search" id="searchformindiv">
+<form action="/search" method="post" id="searchformindiv">
 <a href="/countries"><i class="fa fa-times fa-3x" aria-hidden="true" id="exit"></i></a><br><br>
-  <input type="text" size="40" name="tour" placeholder="What are you looking for?"><br><br>
+  <input type="text" size="40" name="search" placeholder="What are you looking for?"><br><br>
   <input type="submit" value="submit" class="p btn btn-success dropdown-toggle btn-block">
 </form>
 </div>

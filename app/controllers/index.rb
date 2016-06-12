@@ -24,6 +24,21 @@ get '/tour/:id' do
 	end
 end
 
+post '/search' do
+	@tour = Tour.find_by(tour_name: params[:search])
+	@country = Country.find_by(country_name: params[:search])
+	if @tour
+		tour_id = @tour.id
+		redirect "/tour/#{tour_id}"
+	elsif @country
+		country_id = @country.id
+		redirect "/countries/#{country_id}"
+	else
+		session[:error] = "No matching result"
+		redirect '/'
+	end
+end
+
 get '/users/:id/wishlists' do
 	@wishlists = current_user.wishlists
 	@tours = current_user.tours.uniq
@@ -45,9 +60,6 @@ get '/users/:id/wishlist/:tour_id' do
 	end
 end
 
-get '/search' do
-	redirect '/tour/3'
-end
 
 get '/purchase/:id' do
 	@tour = Tour.find(params[:id])

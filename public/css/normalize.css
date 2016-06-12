@@ -439,6 +439,11 @@ footer {
   bottom: 0;
 }
 
+.unsplash{
+  width: 100%;
+  height: 500px;
+}
+
 .country_name {
   margin-left: 310px;
   font-size: 35px;
@@ -452,7 +457,7 @@ footer {
 
 .world-map{
   height: 300px;
-  width: 1440px;
+  width: 100%;
 }
 
 #button{
@@ -475,15 +480,15 @@ footer {
 }
 
 #taiwan{
-  position: absolute;
-  top: 660px;
-  left: 1273px;
+  position: relative;
+  top: 130px;
+  left: 1270px;
 }
 
 #uk{
-  position: absolute;
-  top: 650px;
-  left: 700px;
+  position: relative;
+  top: 120px;
+  left: 670px;
 }
 
 #searchform{

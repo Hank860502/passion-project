@@ -35,6 +35,7 @@ post '/search' do
 		redirect "/countries/#{country_id}"
 	else
 		session[:error] = "No matching result"
+		redirect '/'
 	end
 end
 

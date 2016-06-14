@@ -38,6 +38,7 @@ Tour.create(tour_name: "The sky garden", price: 50, content: "Enjoy the best foo
 Image.create(url: "http://livrancourt.com/wp/wp-content/uploads/2013/01/Eilean-Donan-Castle-1220-Loch-Duichear-Kyle-of-Lochalsh-Scotland.jpg", tour_id: 5) #UK castle
 Image.create(url: "https://images.unsplash.com/photo-1454537468202-b7ff71d51c2e?crop=entropy&fit=crop&fm=jpg&h=800&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=975", tour_id: 6) #london bridge
 Image.create(url: "http://corporate.studygroup.com/-/media/Corporate%20Site/Images/Carousel/Standard/Higher%20Education/UK/Higher_education_uk.jpg", tour_id: 7)
+Image.create(url: "https://media-cdn.tripadvisor.com/media/photo-s/07/4a/1e/7f/sunset-at-sky-garden.jpg", tour_id: 8)
 
 
 

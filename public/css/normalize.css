@@ -522,8 +522,8 @@ footer {
   font-size: 40px;
 }
 
-#googleMap{
-  width:500px;
+#map{
+  width:560px;
   height:380px;
   position: absolute;
   top: 650px;

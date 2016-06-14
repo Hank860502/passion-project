@@ -2,6 +2,7 @@ $(document).ready(function() {
   Materialize.updateTextFields();
   $('select').material_select();
   $('input#input_text, textarea#textarea1').characterCounter();
+  eventListeners();
 //   var moltin = new Moltin({publicId: 'NGtMpNEgNZhfU9MHjFAfDja1CkkhoiRvkg6JUkCS3A'});
 //   moltin.Authenticate(function() {
 
@@ -31,7 +32,6 @@ $(document).ready(function() {
   //   console.log("box")
   //   $(".tour").append("<div id='googleMap' style='width:500px;height:380px;'></div>")
   // })
-  eventListeners();
   // searchBar();
   //   $(".products").html(product[0].description)
   //   console.log(product)
@@ -97,11 +97,3 @@ function hideForm(e){
 
 }
 
-    // for (var i = products.length - 1; i >= 0; i--) {
-    //   var product = products[i];
-    //   var div = document.createElement("div");
-    //   var desc = document.createElement("p");
-    //   desc.innerHTML = product.description;
-    //   div.appendChild(desc);
-    //   $('.products').append(div);
-    // }

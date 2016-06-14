@@ -48,11 +48,28 @@
     <input type="submit" value="Confirm" class="p btn btn-success dropdown-toggle btn-block"><br>
     <a href="/"><button id="cancelpurchase" class="p btn btn-success dropdown-toggle btn-block">Cancel</button></a>
   </form>
-
 </div>
-  
+<div style='width: 800px;'>
+  <div id="map" style='width: 800px; height: 400px;'></div>
+</div>
+<p><%=@tour.latitude%></p>
+<p><%=@tour.longitude%></p>
 
+<script>
 
+var map;
+function initMap() {
+  var lat = <%= @tour.latitude%>
+  var lng = <%= @tour.longitude%>
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: lng, lng: lat},
+    zoom: 15
+  });
+}
+
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=<%=@api%>&callback=initMap"
+        async defer></script>
 
 
 

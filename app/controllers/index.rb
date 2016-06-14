@@ -15,6 +15,7 @@ get '/countries/:id' do
 end
 
 get '/tour/:id' do
+	@api = ENV["SESSION_SECRET"]
 	if session[:user_id]
 		@tour = Tour.find(params[:id])
 		erb :'/country/tour'

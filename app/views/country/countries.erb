@@ -1,0 +1,24 @@
+
+<img src=https://source.unsplash.com/user/hank860502/likes class="unsplash">
+<div id="header"></div>
+<button type="button" id="button" class="p btn btn-success dropdown-toggle btn-block"><i class="fa fa-search" aria-hidden="true"></i>    Where do you want to go?</button>
+<% @countries.each do |country| %>
+	<div class="row">
+		<div class="col s12 m3">
+			<div class="card small">
+				<div class="card">
+				  <div class="card-image waves-effect waves-block waves-light">
+				    <img class="activator" src="<%= country.url %>">
+				  </div>
+				  <div class="card-content">
+				    <span class="card-title activator grey-text text-darken-4"><%= country.country_name %><i class="material-icons right">more_vert</i></span>
+				    <p><a href="/countries/<%= country.id %>">This is a link</a></p>
+				  </div>
+				  <div class="card-reveal">
+				    <span class="card-title grey-text text-darken-4"><%= country.country_name %><i class="material-icons right">close</i></span>
+				  </div>
+				</div>
+			</div>
+	</div>
+<% end %>
+</div>

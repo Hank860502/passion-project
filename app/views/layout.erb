@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!--
+    normalize.css removes cross-browser differences in defaults, e.g.,
+    differences in how form elements appear between Firefox and IE
+    See: http://necolas.github.com/normalize.css/
+  -->
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--
+    application.css is where you put your styles
+  -->
+  <script src="//cdn.jsdelivr.net/rsvp/3.0.6/rsvp.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+
+  <title></title>
+</head>
+<body>
+  <script src="/js/init.js"></script>
+  <nav>
+    <div class="nav-wrapper black">
+        <ul id="nav-mobile" class="right">
+        <a href="/countries" class="brand-logo center">Traveller</a>
+          <% if current_user %>
+            <li><a href="/users/<%= current_user.id %>/wishlists">Wish list</a></li>
+            <li><a href="/logout">Logout</a></li>
+          <% else %>
+          <a href="/" class="brand-logo center">Traveller</a>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/register">Register</a></li>
+          <% end %>
+          <a href="/search" id="navsearch"><i class="fa fa-search fa-2x" aria-hidden="true"></i></a>
+    </div>
+  </nav>
+<div id="searchform">
+<form action="/search" method="post" id="searchformindiv">
+<a href="/countries"><i class="fa fa-times fa-3x" aria-hidden="true" id="exit"></i></a><br><br>
+  <input type="text" size="40" name="search" placeholder="What are you looking for?"><br><br>
+  <input type="submit" value="submit" class="p btn btn-success dropdown-toggle btn-block">
+</form>
+</div>
+  <%= yield %>
+  <script src="https://js.moltin.com/v1"></script>
+  <footer>
+  <span class="fa-stack fa-lg">
+    <a href="https://www.facebook.com/northwest.com.tw/?fref=ts"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-facebook fa-stack-1x fa-inverse"></i></a>
+  </span>
+  <span class="fa-stack fa-lg">
+  <a href="https://www.youtube.com/user/hank23223339"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-youtube-play fa-stack-1x fa-inverse"></i></a>
+  </span>
+  <span class="fa-stack fa-lg">
+  <a href="https://twitter.com/northwest_tour"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-twitter fa-stack-1x fa-inverse"></i></a>
+  </span>
+  <span class="fa-stack fa-lg">
+  <a href=""><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-paypal fa-stack-1x fa-inverse"></i></a>
+  </span>
+  <span class="fa-stack fa-lg">
+  <a href="/"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-google-plus fa-stack-1x fa-inverse"></i></a>
+  </span>
+  </footer>
+  <script src="https://use.fontawesome.com/30c74e4f15.js"></script>
+</body>
+</html>

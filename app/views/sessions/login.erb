@@ -1,0 +1,11 @@
+<% if @error %>
+	<h3 style="text-align: center;"><%= @error %></h3>
+<% end %>
+
+<form method="post" action="/login">
+	<p>user name</p>
+	<input type="text" name="user_name">
+	<p>password</p>
+	<input type="password" name="password">
+	<input type="submit" value="login">
+</form>

@@ -1,0 +1,71 @@
+<div class="tour">
+<% @tour.images.each do |image| %>
+	<img src="<%= image.url %>" id="tourimage"><br>
+  <div class="tourcontent">
+<h3><%= @tour.tour_name %></h3><br>
+<% end %>
+<p>Description: <%= @tour.content %><br></p>
+<p>Lasting Time: <%= @tour.time_needed %> hours.</p>
+<p>Price: $<%= @tour.price %></p>
+<a href="/users/<%= current_user.id %>/wishlist/<%= @tour.id %>" class="add_to_wishlist">Add to wish list</a>
+
+<div class="row">
+    <form class="col s6" action="/purchase/<%= @tour.id %>" id="purchaseform">
+      <div class="row">
+        <div class="input-field col s6">
+          <input id="first_name" type="text" class="validate" name="quantity">
+          <label for="first_name">Quantity</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="last_name" type="text" class="validate" name="date">
+          <label for="last_name">Date</label>
+        </div>
+      </div>
+      <div class="row">
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="email" type="email" class="validate" name="remarks">
+          <label for="email">Remarks(optional)</label>
+        </div>
+      </div>
+
+  <button class="p btn btn-success dropdown-toggle btn-block" type="submit" id="purchasebutton">Purchase now</button>
+    </form>
+<!--     <button id="map" class="p btn btn-success dropdown-toggle btn-block" type="submit">Extend map</button> -->
+  </div>
+</div>
+
+<div class="purchaseform" id="searchform">
+<label>Quantity</label>
+  <form id="searchformindiv" action="/purchase/<%=@tour.id%>">
+  <input type="text" name="date" value="2016/Jan/1st">
+    <input type="text" name="quantity" value="5">
+    <input type="submit" value="Confirm" class="p btn btn-success dropdown-toggle btn-block"><br>
+    <a href="/"><button id="cancelpurchase" class="p btn btn-success dropdown-toggle btn-block">Cancel</button></a>
+  </form>
+</div>
+  <div>
+    <div id="map"></div>
+  </div>
+  <script>
+    var map;
+    function initMap() {
+      var lat = <%= @tour.latitude%>
+      var lng = <%= @tour.longitude%>
+      map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: lng, lng: lat},
+        zoom: 15
+      });
+      var marker = new google.maps.Marker({
+        position: {lat: lng, lng: lat},
+        map: map,
+        title: 'Hello World!'
+      });
+    }
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=<%=@api%>&callback=initMap" async defer></script>
+
+
+
+
